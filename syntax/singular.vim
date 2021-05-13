@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     Singular
 " Maintainer:   Henning Kopp <kopp@mathematik.uni-kl.de>
-" Last Change:  2011 Nov 09
+" Last Change:  2021 May 13
 "
 " HOW TO USE THIS FILE
 " Put this file into ~/.vim/syntax/singular.vim or
@@ -10,10 +10,7 @@
 " Then you can use the commands :syntax=singular
 " or :set filetype=singular to load the syntax highlighting for your
 " Singular file
-" If you are lazy, you should consider adding
-" map <special> <F12> :set filetype=singular<CR>
-" to your vimrc. Now you can enable singular syntax by pressing F12
-"
+
 " Quit when a (custom) syntax file was already loaded
 if exists("b:current_syntax")
   finish
@@ -57,7 +54,7 @@ syn keyword     Function        help highcorner hilb homog hres
 syn keyword     Function        imap impart indepSet insert interpolation interred intersect
 syn keyword     Function        jacob janet jet
 syn keyword     Function        kbase kernel kill killattrib koszul
-syn keyword     Function        laguerre lead leadcoef leadexp leadmonom LIB lift liftstd listvar lres ludecomp luinverse lusolve
+syn keyword     Function        laguerre lead leadcoef leadexp leadmonom lift liftstd listvar lres ludecomp luinverse lusolve
 syn keyword     Function        maxideal memory minbase minor minres modulo monitor monomial mpresmat mres mstd mult
 syn keyword     Function        nameof names ncols npars nres nrows nvars
 syn keyword     Function        open option ord ordstr
@@ -69,6 +66,7 @@ syn keyword     Function        trace transpose type typeof
 syn keyword     Function        univariate uressolve
 syn keyword     Function        vandermonde var variables varstr vdim
 syn keyword     Function        waitall waitfirst wedge weight weightKB write
+syn keyword     Function        twostd rightstd
 
 " STATEMENT
 " Conditional
@@ -81,6 +79,7 @@ syn keyword     Keyword        break breakpoint continue export exportto importf
 " TYPE
 syn keyword     Type           bigint def ideal int intmat intvec link list map matrix module number package poly proc qring resolution ring string vector pyobject
 
+syn keyword     Include        LIB
 
 syn match       Error          "\*/"
 " For wrong comments
